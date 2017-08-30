@@ -1,0 +1,19 @@
+﻿<local:MainViewBible 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"       
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:mBible" 
+    SampleProperty="Sample Text Property Value">
+
+    <local:MainViewBible.Bibles>
+        <local:ItemViewBible Testament="1" Book="1" Chapters="50" English="Genesis" Abbrevs="Gen." Swahili="Mwanzo (SWA)" />
+        <local:ItemViewBible Testament="1" Book="2" Chapters="40" English="Exodus" Abbrevs="Ex." Swahili="Kutoka (SWA)" />
+        <local:ItemViewBible Testament="1" Book="3" Chapters="27" English="Leviticus" Abbrevs="Lev." Swahili="Mambo ya Walawi (SWA)" />
+        <local:ItemViewBible Testament="1" Book="4" Chapters="36" English="Numbers" Abbrevs="Num." Swahili="Hesabu (SWA)" />
+        <local:ItemViewBible Testament="1" Book="5" Chapters="34" English="Deutronomy" Abbrevs="Deut." Swahili="Kumbukumbu la Torati (SWA)" />
+        <local:ItemViewBible Testament="1" Book="6" Chapters="24" English="Joshua" Abbrevs="Josh." Swahili="Yoshua (SWA)" />
+        <local:ItemViewBible Testament="1" Book="7" Chapters="21" English="Judges" Abbrevs="Judg." Swahili="Waamuzi (SWA)" />
+        <local:ItemViewBible Testament="1" Book="8" Chapters="4" English="Ruth" Abbrevs="Ruth" Swahili="Ruthu (SWA)" />
+
+    </local:MainViewBible.Bibles>
+
+</local:MainViewBible>

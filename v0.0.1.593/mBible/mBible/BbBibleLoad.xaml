@@ -1,0 +1,93 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="mBible.BbBibleLoad"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="0,0,0,0">
+            <TextBlock x:Name="PageTitle"  Text="MBIBLE" Style="{StaticResource PhoneTextNormalStyle}"/>
+            
+        </StackPanel>
+
+        <StackPanel x:Name="MainPanel" Grid.Row="1" Margin="10" VerticalAlignment="Center">
+            <ProgressBar IsIndeterminate="True" Height="50" />
+            <TextBlock x:Name="ContentTitle"  Text="Setting up mBible" TextAlignment="Center" FontFamily="Trebuchet MS" FontSize="35" 
+                />
+            <TextBlock x:Name="txtProgress" Text="Loading the Master Bible"
+                TextAlignment="Center" TextWrapping="Wrap" FontFamily="Trebuchet MS" FontSize="30" Padding="20"
+                />
+            
+            <Button x:Name="btnProceed" Content="PROCEED" Margin="30" Padding="20"
+                 FontSize="35" Click="ProceedloadingBible" Visibility="Collapsed" />
+
+        </StackPanel>
+        <!--
+        <StackPanel Grid.Row="2"   Orientation="Vertical" Name="PeriodicStackPanel" Margin="0,0,0,40">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="name: " Style="{StaticResource PhoneTextAccentStyle}"/>
+                <TextBlock Text="{Binding Name}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="is scheduled: "  Style="{StaticResource PhoneTextAccentStyle}"/>
+                <TextBlock Text="{Binding IsScheduled}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="last scheduled time: "  Style="{StaticResource PhoneTextAccentStyle}"/>
+                <TextBlock Text="{Binding LastScheduledTime}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="expiration time: " Style="{StaticResource PhoneTextAccentStyle}"/>
+                <TextBlock Text="{Binding ExpirationTime}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="last exit reason: "  Style="{StaticResource PhoneTextAccentStyle}"/>
+                <TextBlock Text="{Binding LastExitReason}" />
+            </StackPanel>
+        </StackPanel>-->
+        <!--
+        <StackPanel  Orientation="Vertical" Name="ResourceIntensiveStackPanel" Margin="0,0,0,40">
+            <TextBlock Text="Resource-intensive Agent" Style="{StaticResource PhoneTextTitle2Style}"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="name: " Style="{StaticResource PhoneTextAccentStyle}"/>
+                <TextBlock Text="{Binding Name}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="is enabled" VerticalAlignment="Center"  Style="{StaticResource PhoneTextAccentStyle}"/>
+                <CheckBox Name="ResourceIntensiveCheckBox" IsChecked="{Binding IsEnabled}" Checked="ResourceIntensiveCheckBox_Checked" Unchecked="ResourceIntensiveCheckBox_Unchecked"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="is scheduled: "  Style="{StaticResource PhoneTextAccentStyle}"/>
+                <TextBlock Text="{Binding IsScheduled}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="last scheduled time: "  Style="{StaticResource PhoneTextAccentStyle}"/>
+                <TextBlock Text="{Binding LastScheduledTime}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="expiration time: " Style="{StaticResource PhoneTextAccentStyle}"/>
+                <TextBlock Text="{Binding ExpirationTime}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="last exit reason: "  Style="{StaticResource PhoneTextAccentStyle}"/>
+                <TextBlock Text="{Binding LastExitReason}" />
+            </StackPanel>
+        </StackPanel>-->
+    </Grid>
+
+</phone:PhoneApplicationPage>

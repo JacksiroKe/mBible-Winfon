@@ -1,0 +1,144 @@
+﻿<phone:PhoneApplicationPage xmlns:AsTextBox="clr-namespace:AsTextBox;assembly=AsTextBox" 
+    x:Class="mBible.CcSearch"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DataContext="{d:DesignData SampleData/SampleData2.xaml}"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True"
+    xmlns:As="clr-namespace:AsTextBox;assembly=AsTextBox" >
+
+    <phone:PhoneApplicationPage.Resources>
+        <Style x:Key="SimpleTextBoxStyle" TargetType="TextBox">
+            <Setter Property="FontFamily" Value="{StaticResource PhoneFontFamilyNormal}"/>
+            <Setter Property="FontSize" Value="{StaticResource PhoneFontSizeMediumLarge}"/>
+            <Setter Property="Background" Value="{StaticResource PhoneTextBoxBrush}"/>
+            <Setter Property="Foreground" Value="{StaticResource PhoneTextBoxForegroundBrush}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource PhoneTextBoxBrush}"/>
+            <Setter Property="SelectionBackground" Value="{StaticResource PhoneAccentBrush}"/>
+            <Setter Property="SelectionForeground" Value="{StaticResource PhoneTextBoxSelectionForegroundBrush}"/>
+            <Setter Property="BorderThickness" Value="{StaticResource PhoneBorderThickness}"/>
+            <Setter Property="Padding" Value="2"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Grid Background="Transparent">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="MouseOver"/>
+                                    <VisualState x:Name="Disabled">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="EnabledBorder">
+                                                <DiscreteObjectKeyFrame KeyTime="0">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <Visibility>Collapsed</Visibility>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="ReadOnly">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="EnabledBorder">
+                                                <DiscreteObjectKeyFrame KeyTime="0">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <Visibility>Collapsed</Visibility>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="FocusStates">
+                                    <VisualState x:Name="Focused">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="EnabledBorder">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneTextBoxEditBackgroundBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="BorderBrush" Storyboard.TargetName="EnabledBorder">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PhoneTextBoxEditBorderBrush}"/>
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Unfocused"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Border x:Name="EnabledBorder" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Margin="{StaticResource PhoneTouchTargetOverhang}">
+                                <ContentControl x:Name="ContentElement" BorderThickness="0" HorizontalContentAlignment="Stretch" Margin="{StaticResource PhoneTextBoxInnerMargin}" Padding="{TemplateBinding Padding}" VerticalContentAlignment="Stretch"/>
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </phone:PhoneApplicationPage.Resources>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel x:Name="SearchPanel" Grid.Row="0" Orientation="Horizontal" >
+            <Button Name="btnSearch" Width="75" Height="100" Padding="0" BorderBrush="Transparent" Canvas.ZIndex="99" Click="btnSearch_Click">
+                <Image Height="50" Width="50" Stretch="Fill"
+                                Source="/Assets/AppBar/appbar_search_now.png" Margin="0" />
+            </Button>
+            <As:AsTextBox Grid.Row="0" x:Name="SearchBox" DefaultText="Search"
+                TextChanged="SearchBox_TextChanged"  Width="480" Height="100"
+                FontSize="35" Padding="50,10,10,10" Margin="-75,-10,-75,-10" Foreground="#FFAA6F28" 
+                Background="White" BorderBrush="Transparent" Style="{StaticResource SimpleTextBoxStyle}" />
+            
+            <Button Name="btnClear" Width="75" Height="100" Padding="0" BorderBrush="Transparent" Click="btnClear_Click">
+                <Image Height="50" Width="50" Stretch="Fill"
+                 Source="/Assets/AppBar/appbar_search_clear.png" Margin="0" />
+            </Button>
+        </StackPanel>
+
+        <StackPanel x:Name="HeadPanel" Grid.Row="1" Orientation="Vertical" >
+               <ProgressBar IsIndeterminate="True" Height="10"/>
+        </StackPanel>
+        
+        <ListBox Grid.Row="2" Margin="12,0,12,0" Background="White"
+                 x:Name="MainListBox" ItemsSource="{Binding Verses}" SelectionChanged="MainListBox_SelectionChanged" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="0,0,0,2" Orientation="Vertical" Background="black">
+                        <TextBlock x:Name="Title" Text="{Binding Title}" Height="Auto" Foreground="White"
+                            TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}" 
+                            FontSize="30" Width="480"/>
+                        <TextBlock x:Name="Verse" Text="{Binding Verse}" Height="Auto" Foreground="White"
+                            TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}" 
+                            FontSize="30" Width="480"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <ListBox Grid.Row="3"  
+              x:Name="FinalListBox" ItemsSource="{Binding Bibles}" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="0,0,0,2" Width="480" Orientation="Vertical" Background="black">
+                        <TextBlock x:Name="Code1" Text="{Binding Swahili}" 
+                            TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}" 
+                            FontSize="35" LineHeight="35" Height="45" Foreground="White" />
+
+                    </StackPanel>
+
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+
+</phone:PhoneApplicationPage>

@@ -1,0 +1,155 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="mBible.CcChapters"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Name="AppTitle_P" Background="#FFAA6F28" Grid.Row="0" >
+            <TextBlock Text="MBIBLE" Style="{StaticResource PhoneTextNormalStyle}" Margin="10,10,10,0" />
+            <TextBlock Name="txtBook_P" Text="Genesis ..." Margin="10" FontSize="50"/>
+            <TextBlock Name="txtMaximum_P"  FontSize="50" Text="Chapter? [1 - 50]" 
+               Margin="10,0,10,0" Foreground="White" />
+        </StackPanel>
+
+        <Grid x:Name="ContentPanel_P" Grid.Row="1" Margin="10,0,10,0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="115"/>
+                <RowDefinition Height="115"/>
+                <RowDefinition Height="115"/>
+                <RowDefinition Height="115"/>
+            </Grid.RowDefinitions>
+            
+            <StackPanel Grid.Row="0" Orientation="Horizontal">
+                <TextBox Name="txtChapter_P" Width="300" FontSize="50" FontWeight="Bold" 
+                    InputScope="Number" Foreground="#FFAA6F28" Background="white" 
+                    TextChanged="txtChapter_TextChanged" />
+                <Button Name="btnClear_P" Width="150" Click="btnClear_Click">
+                    <TextBlock Text="X" FontSize="50" FontWeight="Bold" />
+                </Button>
+            </StackPanel>
+            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                <Button Name="btnSeven_P" Width="150" Click="btnSeven_Click">
+                    <TextBlock Text="7" FontSize="50" FontWeight="Bold" Margin="-10"/>
+                </Button>
+                <Button Name="btnEight_P" Width="150" Click="btnEight_Click">
+                    <TextBlock Text="8" FontSize="50" FontWeight="Bold"  Margin="-10"/>
+                </Button>
+                <Button Name="btnNine_P" Width="150" Click="btnNine_Click">
+                    <TextBlock Text="9" FontSize="50" FontWeight="Bold"  Margin="-10"/>
+                </Button>
+            </StackPanel>
+            <StackPanel Grid.Row="2" Orientation="Horizontal">
+                <Button Name="btnFour_P" Width="150" Click="btnFour_Click">
+                    <TextBlock Text="4" FontSize="50" FontWeight="Bold"  Margin="-10"/>
+                </Button>
+                <Button Name="btnFive_P" Width="150" Click="btnFive_Click">
+                    <TextBlock Text="5" FontSize="50" FontWeight="Bold"  Margin="-10"/>
+                </Button>
+                <Button Name="btnSix_P" Width="150" Click="btnSix_Click">
+                    <TextBlock Text="6" FontSize="50" FontWeight="Bold"  Margin="-10"/>
+                </Button>
+            </StackPanel>
+            <StackPanel Grid.Row="3" Orientation="Horizontal">
+                <Button Name="btnOne_P" Width="150" Click="btnOne_Click">
+                    <TextBlock Text="1" FontSize="50" FontWeight="Bold"  Margin="-10"/>
+                </Button>
+                <Button Name="btnTwo_P" Width="150" Click="btnTwo_Click">
+                    <TextBlock Text="2" FontSize="50" FontWeight="Bold"  Margin="-10"/>
+                </Button>
+                <Button Name="btnThree_P" Width="150" Click="btnThree_Click">
+                    <TextBlock Text="3" FontSize="50" FontWeight="Bold"  Margin="-10"/>
+                </Button>
+            </StackPanel>
+            <StackPanel Grid.Row="4" Orientation="Horizontal">
+                <Button Name="btnZero_P" Width="150" Click="btnZero_Click">
+                    <TextBlock Text="0" FontSize="50" FontWeight="Bold"  Margin="-10"/>
+                </Button>
+                <Button Name="btnProceed_P" Width="300" Click="btnProceed_Click" IsEnabled="False">
+                    <TextBlock Text="PROCEED" FontSize="50" FontWeight="Bold"  Margin="-10"/>
+                </Button>
+            </StackPanel>
+        </Grid>
+        
+        <!-- LANDSCAPE MODE-->
+
+        <StackPanel Name="AppTitle_L"  Grid.Row="0" Margin="10" Visibility="Collapsed">
+            <TextBlock Text="MBIBLE" Style="{StaticResource PhoneTextNormalStyle}"/>
+        </StackPanel>
+
+        <Grid x:Name="ContentPanel_L" Grid.Row="1" Margin="5,0,5,0" Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Background="#FFAA6F28" Margin="10" >
+                <TextBlock Name="txtBook_L" Text="Genesis ..." Margin="10" FontSize="50"/>
+                <TextBlock Name="txtMaximum_L" Text="Chapter? [1 - 50]" Margin="10" FontSize="50" />
+            </StackPanel>
+            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                <Button Name="btnSeven_L" Width="143" Click="btnSeven_Click">
+                    <TextBlock Text="7" FontSize="45" FontWeight="Bold" Margin="-10"/>
+                </Button>
+                <Button Name="btnEight_L" Width="143" Click="btnEight_Click">
+                    <TextBlock Text="8" FontSize="45" FontWeight="Bold"  Margin="-10"/>
+                </Button>
+                <Button Name="btnNine_L" Width="143" Click="btnNine_Click">
+                    <TextBlock Text="9" FontSize="45" FontWeight="Bold"  Margin="-10"/>
+                </Button>
+                <TextBox Name="txtChapter_L" Width="286" FontSize="50" FontWeight="Bold" 
+                    InputScope="Number" Foreground="#FFAA6F28" Background="white" 
+                    TextChanged="txtChapter_TextChanged" />
+            </StackPanel>
+            <StackPanel Grid.Row="2" Orientation="Horizontal">
+                <Button Name="btnFour_L" Width="143" Click="btnFour_Click">
+                    <TextBlock Text="4" FontSize="45" FontWeight="Bold"  Margin="-10"/>
+                </Button>
+                <Button Name="btnFive_L" Width="143" Click="btnFive_Click">
+                    <TextBlock Text="5" FontSize="45" FontWeight="Bold"  Margin="-10"/>
+                </Button>
+                <Button Name="btnSix_L" Width="143" Click="btnSix_Click">
+                    <TextBlock Text="6" FontSize="45" FontWeight="Bold"  Margin="-10"/>
+                </Button>
+                <Button Name="btnZero_L" Width="143" Click="btnZero_Click">
+                    <TextBlock Text="0" FontSize="45" FontWeight="Bold" />
+                </Button>
+                <Button Name="btnClear_L" Width="143" Click="btnClear_Click">
+                    <TextBlock Text="X" FontSize="45" FontWeight="Bold" />
+                </Button>
+            </StackPanel>
+            <StackPanel Grid.Row="3" Orientation="Horizontal">
+
+                <Button Name="btnOne_L" Width="143" Click="btnOne_Click">
+                    <TextBlock Text="1" FontSize="45" FontWeight="Bold"  Margin="-10"/>
+                </Button>
+                <Button Name="btnTwo_L" Width="143" Click="btnTwo_Click">
+                    <TextBlock Text="2" FontSize="45" FontWeight="Bold"  Margin="-10"/>
+                </Button>
+                <Button Name="btnThree_L" Width="143" Click="btnThree_Click">
+                    <TextBlock Text="3" FontSize="45" FontWeight="Bold"  Margin="-10"/>
+                </Button>
+                <Button Name="btnProceed_L" Width="286" Click="btnProceed_Click" IsEnabled="False">
+                    <TextBlock Text="PROCEED" FontSize="45" FontWeight="Bold"  Margin="-10"/>
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+    
+</phone:PhoneApplicationPage>

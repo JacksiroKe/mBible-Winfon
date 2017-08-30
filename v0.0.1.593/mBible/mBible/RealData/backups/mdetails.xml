@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<MasterBible>
+	<Bible Testament="1" Book="1" Chapters="50" English="Genesis" Abbrevs="Gen." Swahili="Mwanzo (SWA)" />
+	<Bible Testament="1" Book="2" Chapters="40" English="Exodus" Abbrevs="Ex." Swahili="Kutoka (SWA)" />
+	<Bible Testament="1" Book="3" Chapters="27" English="Leviticus" Abbrevs="Lev." Swahili="Mambo ya Walawi (SWA)" />
+	<Bible Testament="1" Book="4" Chapters="36" English="Numbers" Abbrevs="Num." Swahili="Hesabu (SWA)" />
+	<Bible Testament="1" Book="5" Chapters="34" English="Deutronomy" Abbrevs="Deut." Swahili="Kumbukumbu la Torati (SWA)" />
+	<Bible Testament="1" Book="6" Chapters="24" English="Joshua" Abbrevs="Josh." Swahili="Yoshua (SWA)" />
+	<Bible Testament="1" Book="7" Chapters="21" English="Judges" Abbrevs="Judg." Swahili="Waamuzi (SWA)" />
+	<Bible Testament="1" Book="8" Chapters="4" English="Ruth" Abbrevs="Ruth" Swahili="Ruthu (SWA)" />
+	<Bible Testament="1" Book="9" Chapters="31" English="First Samuel" Abbrevs="1 Sam." Swahili="1 Samweli (SWA)" />
+	<Bible Testament="1" Book="10" Chapters="24" English="Second Samuel" Abbrevs="2 Sam." Swahili="2 Samweli (SWA)" />
+	<Bible Testament="1" Book="11" Chapters="22" English="First Kings" Abbrevs="1 Kings" Swahili="1 Wafalme (SWA)" />
+	<Bible Testament="1" Book="12" Chapters="25" English="Second Kings" Abbrevs="2 Kings" Swahili="2 Wafalme (SWA)" />
+	<Bible Testament="1" Book="13" Chapters="29" English="First Chronicles" Abbrevs="1 Chr." Swahili="1 Mambo ya Nyakati (SWA)" />
+	<Bible Testament="1" Book="14" Chapters="36" English="Second Chronicles" Abbrevs="2 Chr." Swahili="2 Mambo ya Nyakati (SWA)" />
+	<Bible Testament="1" Book="15" Chapters="10" English="Ezra" Abbrevs="Ezra" Swahili="Ezra (SWA)" />
+	<Bible Testament="1" Book="16" Chapters="13" English="Nehemiah" Abbrevs="Neh." Swahili="Nehemiah (SWA)" />
+	<Bible Testament="1" Book="17" Chapters="10" English="Esther" Abbrevs="Esther" Swahili="Esta (SWA)" />
+	<Bible Testament="1" Book="18" Chapters="42" English="Job" Abbrevs="Job" Swahili="Ayubu (SWA)" />
+	<Bible Testament="1" Book="19" Chapters="150" English="Psalms" Abbrevs="Ps" Swahili="Zaburi (SWA)" />
+	<Bible Testament="1" Book="20" Chapters="31" English="Proverbs" Abbrevs="Prov" Swahili="Mithali (SWA)" />
+	<Bible Testament="1" Book="21" Chapters="12" English="Ecclesiates" Abbrevs="Eccles" Swahili="Mhubiri (SWA)" />
+	<Bible Testament="1" Book="22" Chapters="8" English="Songs of Solomon" Abbrevs="Song." Swahili="Wimbo Ulio Bora (SWA)" />
+	<Bible Testament="1" Book="23" Chapters="66" English="Isaiah" Abbrevs="Is." Swahili="Isaya (SWA)" />
+	<Bible Testament="1" Book="24" Chapters="52" English="Jeremiah" Abbrevs="Jer." Swahili="Yeremia (SWA)" />
+	<Bible Testament="1" Book="25" Chapters="5" English="Lamentations" Abbrevs="Lam." Swahili="Maombolezo (SWA)" />
+	<Bible Testament="1" Book="26" Chapters="48" English="Ezekiel" Abbrevs="Ezek." Swahili="Ezekieli (SWA)" />
+	<Bible Testament="1" Book="27" Chapters="12" English="Daniel" Abbrevs="Dan." Swahili="Danieli (SWA)" />
+	<Bible Testament="1" Book="28" Chapters="14" English="Hosea" Abbrevs="Hos." Swahili="Hosea (SWA)" />
+	<Bible Testament="1" Book="29" Chapters="3" English="Joel" Abbrevs="Joel" Swahili="Yoeli (SWA)" />
+	<Bible Testament="1" Book="30" Chapters="9" English="Amos" Abbrevs="Amos" Swahili="Amosi (SWA)" />
+	<Bible Testament="1" Book="31" Chapters="1" English="Obadiah" Abbrevs="Obad." Swahili="Obadia (SWA)" />
+	<Bible Testament="1" Book="32" Chapters="4" English="Jonah" Abbrevs="Jonah" Swahili="Yona (SWA)" />
+	<Bible Testament="1" Book="33" Chapters="7" English="Micah" Abbrevs="Mic." Swahili="Mika (SWA)" />
+	<Bible Testament="1" Book="34" Chapters="3" English="Nahum" Abbrevs="Nahum" Swahili="Nahumu (SWA)" />
+	<Bible Testament="1" Book="35" Chapters="3" English="Habakkuk" Abbrevs="Hab." Swahili="Habakuki (SWA)" />
+	<Bible Testament="1" Book="36" Chapters="3" English="Zephaniah" Abbrevs="Zeph." Swahili="Sefania (SWA)" />
+	<Bible Testament="1" Book="37" Chapters="2" English="Haggai" Abbrevs="Hag." Swahili="Hagai (SWA)" />
+	<Bible Testament="1" Book="38" Chapters="14" English="Zechariah" Abbrevs="Zech." Swahili="Zekaria (SWA)" />
+	<Bible Testament="1" Book="39" Chapters="3" English="Malachi" Abbrevs="Mal." Swahili="Malaki (SWA)" />
+	<Bible Testament="2" Book="40" Chapters="28" English="Matthew" Abbrevs="Matt." Swahili="Mathayo (SWA)" />
+	<Bible Testament="2" Book="41" Chapters="16" English="Mark" Abbrevs="Mark" Swahili="Marko (SWA)" />
+	<Bible Testament="2" Book="42" Chapters="24" English="Luke" Abbrevs="Luke" Swahili="Luka (SWA)" />
+	<Bible Testament="2" Book="43" Chapters="21" English="John" Abbrevs="John" Swahili="Yohana (SWA)" />
+	<Bible Testament="2" Book="44" Chapters="28" English="Acts" Abbrevs="Acts" Swahili="Matendo ya Mitume (SWA)" />
+	<Bible Testament="2" Book="45" Chapters="16" English="Romans" Abbrevs="Rom." Swahili="Warumi (SWA)" />
+	<Bible Testament="2" Book="46" Chapters="16" English="First Corintians" Abbrevs="1 Cor." Swahili="1 Wakorinto (SWA)" />
+	<Bible Testament="2" Book="47" Chapters="13" English="Second Corinthians" Abbrevs="2 Cor." Swahili="2 Wakorinto (SWA)" />
+	<Bible Testament="2" Book="48" Chapters="6" English="Galatinas" Abbrevs="Gal." Swahili="Wagalatia (SWA)" />
+	<Bible Testament="2" Book="49" Chapters="6" English="Ephesians" Abbrevs="Eph." Swahili="Waefeso (SWA)" />
+	<Bible Testament="2" Book="50" Chapters="4" English="Phillipians" Abbrevs="Phil." Swahili="Wafilipi (SWA)" />
+	<Bible Testament="2" Book="51" Chapters="4" English="Colosians" Abbrevs="Col." Swahili="Wakolosai (SWA)" />
+	<Bible Testament="2" Book="52" Chapters="5" English="First Thessalonians" Abbrevs="1 Thess." Swahili="1 Wathesalonike (SWA)" />
+	<Bible Testament="2" Book="53" Chapters="3" English="Second Thessalonians" Abbrevs="2 Thess." Swahili="2 Wathesalonike (SWA)" />
+	<Bible Testament="2" Book="54" Chapters="6" English="First Timothy" Abbrevs="1 Tim." Swahili="1 Timotheo (SWA)" />
+	<Bible Testament="2" Book="55" Chapters="4" English="Second Timothy" Abbrevs="2 Tim." Swahili="2 Timotheo (SWA)" />
+	<Bible Testament="2" Book="56" Chapters="1" English="Titus" Abbrevs="Titus" Swahili="Tito (SWA)" />
+	<Bible Testament="2" Book="57" Chapters="1" English="Philemon" Abbrevs="Philem." Swahili="Filemoni (SWA)" />
+	<Bible Testament="2" Book="58" Chapters="13" English="Hebrews" Abbrevs="Heb." Swahili="Waebrania (SWA)" />
+	<Bible Testament="2" Book="59" Chapters="5" English="James" Abbrevs="James" Swahili="Yakobo (SWA)" />
+	<Bible Testament="2" Book="60" Chapters="5" English="First Peter" Abbrevs="1 Pet." Swahili="1 Petro (SWA)" />
+	<Bible Testament="2" Book="61" Chapters="3" English="Second Peter" Abbrevs="2 Pet." Swahili="2 Petro (SWA)" />
+	<Bible Testament="2" Book="62" Chapters="5" English="First John" Abbrevs="1 John" Swahili="1 Yohana (SWA)" />
+	<Bible Testament="2" Book="63" Chapters="1" English="Second John" Abbrevs="2 John" Swahili="2 Yohana (SWA)" />
+	<Bible Testament="2" Book="64" Chapters="1" English="Third John" Abbrevs="3 John" Swahili="3 Yohana (SWA)" />
+	<Bible Testament="2" Book="65" Chapters="1" English="Jude" Abbrevs="Jude" Swahili="Yuda (SWA)" />
+	<Bible Testament="2" Book="66" Chapters="22" English="Revelation" Abbrevs="Rev." Swahili="Ufunuo wa Yohana (SWA)" />
+</MasterBible>

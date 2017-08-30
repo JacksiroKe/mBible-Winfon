@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EBFB34A5-A22A-4C98-BF7F-800024A23FA8}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>mBible</RootNamespace>
+    <AssemblyName>mBible</AssemblyName>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>mBible_$(Configuration)_$(Platform).xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>mBible.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|ARM' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\ARM\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|ARM' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\ARM\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AppDataView.cs" />
+    <Compile Include="CcSearch.xaml.cs">
+      <DependentUpon>CcSearch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EeSettings.xaml.cs">
+      <DependentUpon>EeSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EeSettings1.xaml.cs">
+      <DependentUpon>EeSettings1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EeSettings2.xaml.cs">
+      <DependentUpon>EeSettings2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EeSettings3.xaml.cs">
+      <DependentUpon>EeSettings3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BbBibleLoad.xaml.cs">
+      <DependentUpon>BbBibleLoad.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CcBible.xaml.cs">
+      <DependentUpon>CcBible.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CcRead.xaml.cs">
+      <DependentUpon>CcRead.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LocalizedStrings.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AppStart.xaml.cs">
+      <DependentUpon>AppStart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\AppResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="AppSettings.cs" />
+    <Compile Include="AppDatabase.cs" />
+    <Compile Include="CcChapters.xaml.cs">
+      <DependentUpon>CcChapters.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RealData\BibleVersesUnselected.cs" />
+    <Compile Include="ViewModels\ItemViewBible.cs" />
+    <Compile Include="ViewModels\ItemViewFont.cs" />
+    <Compile Include="ViewModels\ItemViewModel.cs" />
+    <Compile Include="ViewModels\ItemViewVerse.cs" />
+    <Compile Include="ViewModels\MainViewBible.cs" />
+    <Compile Include="ViewModels\MainViewFont.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\MainViewVerse.cs" />
+    <Compile Include="RealData\AlphaKeyGroup.cs" />
+    <Compile Include="RealData\Maps\MapsViewModel.cs" />
+    <Compile Include="RealData\Maps\Store.cs" />
+    <Compile Include="RealData\Maps\StoreList.cs" />
+    <Compile Include="RealData\PicturesAlbum.cs" />
+    <Compile Include="RealData\AccentColorNameToBrush.cs" />
+    <Compile Include="RealData\ColorExtensions.cs" />
+    <Compile Include="RealData\VerseListObject.cs" />
+    <Compile Include="RealData\DateTimeCollection.cs" />
+    <Compile Include="RealData\DateTimeObject.cs" />
+    <Compile Include="RealData\VerseCollection.cs" />
+    <Compile Include="RealData\VerseObject.cs" />
+    <Compile Include="RealData\VersereadObject.cs" />
+    <Compile Include="RealData\MultilineItem.cs" />
+    <Compile Include="RealData\MultilineItemCollection.cs" />
+    <Compile Include="RealData\Tuple.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="CcSearch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EeSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EeSettings1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EeSettings2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EeSettings3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BbBibleLoad.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CcBible.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CcRead.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <DesignData Include="SampleData\MainViewModelSampleData.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </DesignData>
+    <Page Include="AppStart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SampleData\SampleData1.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SampleData\SampleData2.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CcChapters.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SampleData\SampleData4.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SplashScreenImage.jpg" />
+    <Content Include="Assets\AlignmentGrid.png" />
+    <Content Include="Assets\AppBar\appbar_add.png" />
+    <Content Include="Assets\AppBar\appbar_alarm.png" />
+    <Content Include="Assets\AppBar\appbar_back.png" />
+    <Content Include="Assets\AppBar\appbar_basecircle.png" />
+    <Content Include="Assets\AppBar\appbar_calendar.png" />
+    <Content Include="Assets\AppBar\appbar_camera.png" />
+    <Content Include="Assets\AppBar\appbar_cancel.png" />
+    <Content Include="Assets\AppBar\appbar_check.png" />
+    <Content Include="Assets\AppBar\appbar_close.png" />
+    <Content Include="Assets\AppBar\appbar_copy.png" />
+    <Content Include="Assets\AppBar\appbar_delete.png" />
+    <Content Include="Assets\AppBar\appbar_download.png" />
+    <Content Include="Assets\AppBar\appbar_edit.png" />
+    <Content Include="Assets\AppBar\appbar_email.png" />
+    <Content Include="Assets\AppBar\appbar_favadd.png" />
+    <Content Include="Assets\AppBar\appbar_favall.png" />
+    <Content Include="Assets\AppBar\appbar_ff.png" />
+    <Content Include="Assets\AppBar\appbar_folder.png" />
+    <Content Include="Assets\AppBar\appbar_like.png" />
+    <Content Include="Assets\AppBar\appbar_list.png" />
+    <Content Include="Assets\AppBar\appbar_microphone.png" />
+    <Content Include="Assets\AppBar\appbar_minus.png" />
+    <Content Include="Assets\AppBar\appbar_new.png" />
+    <Content Include="Assets\AppBar\appbar_next.png" />
+    <Content Include="Assets\AppBar\appbar_overflowdots.png" />
+    <Content Include="Assets\AppBar\appbar_pause.png" />
+    <Content Include="Assets\AppBar\appbar_phone.png" />
+    <Content Include="Assets\AppBar\appbar_play.png" />
+    <Content Include="Assets\AppBar\appbar_questionmark.png" />
+    <Content Include="Assets\AppBar\appbar_refresh.png" />
+    <Content Include="Assets\AppBar\appbar_rew.png" />
+    <Content Include="Assets\AppBar\appbar_save.png" />
+    <Content Include="Assets\AppBar\appbar_search.png" />
+    <Content Include="Assets\AppBar\appbar_search_clear.png" />
+    <Content Include="Assets\AppBar\appbar_search_now.png" />
+    <Content Include="Assets\AppBar\appbar_settings.png" />
+    <Content Include="Assets\AppBar\appbar_share.png" />
+    <Content Include="Assets\AppBar\appbar_stop.png" />
+    <Content Include="Assets\AppBar\appbar_sync.png" />
+    <Content Include="Assets\AppBar\appbar_upload.png" />
+    <Content Include="Assets\AppBar\appbar_video.png" />
+    <Content Include="Assets\ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileMedium.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileMediumLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="RealData\mdetails.txt" />
+    <Content Include="RealData\mbible.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AsTextBox\AsTextBox.csproj">
+      <Project>{299BA671-C235-4502-B68E-144752967F51}</Project>
+      <Name>AsTextBox</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=8.0.2.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\WPToolKitUpdate.8.0.2.0\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+</Project>

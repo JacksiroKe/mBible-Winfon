@@ -1,0 +1,21 @@
+﻿<local:MainViewFont 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"       
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:mBible" 
+    SampleProperty="Sample Text Property Value">
+
+    <local:MainViewFont.MyFonts>
+        <local:ItemViewFont FTName = "Arial" />
+        <local:ItemViewFont FTName = "Calibri" />
+        <local:ItemViewFont FTName = "Comic Sans MS" />
+        <local:ItemViewFont FTName = "Courier New" />
+        <local:ItemViewFont FTName = "DengXian" />
+        <local:ItemViewFont FTName = "Georgia" />
+        <local:ItemViewFont FTName = "Lucida Sans Unicode" />
+        <local:ItemViewFont FTName = "Tahoma" />
+        <local:ItemViewFont FTName = "Times New Roman" />
+        <local:ItemViewFont FTName = "Trebuchet MS" />
+        <local:ItemViewFont FTName = "Verdana" />
+    </local:MainViewFont.MyFonts>
+
+</local:MainViewFont>

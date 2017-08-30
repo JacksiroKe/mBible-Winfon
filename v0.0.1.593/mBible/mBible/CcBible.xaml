@@ -1,0 +1,149 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="mBible.CcBible"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DataContext="{d:DesignData SampleData/SampleData1.xaml}"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="PortraitOrLandscape"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="#FFAA6F28">
+        <ProgressBar Name="pProgress" IsIndeterminate="True" Height="50" Foreground="White" />
+
+        <phone:Pivot Name="pBible" Title="MBIBLE">
+            <phone:PivotItem Header="Old T.">
+                <Grid x:Name="LayoutRoot1" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel x:Name="SearchPanel1" Grid.Row="0" 
+                        Orientation="Horizontal" Background="Black">
+                        <Button Name="btnSearch1" Width="75" Height="75" Padding="0" BorderBrush="Transparent" Canvas.ZIndex="99" Click="btnSearch1_Click">
+                            <Image Height="50" Width="50" Stretch="Fill"
+                                Source="/Assets/AppBar/appbar_search_now.png" Margin="0" />
+                        </Button>
+                        
+                        <TextBox x:Name="SearchBox1" Width="460" Height="75" FontSize="30" Padding="50,0,10,0" Margin="-75,-10,-75,-10" 
+                        TextChanged="SearchBox1_TextChanged" Foreground="#FFAA6F28" Background="Black" BorderBrush="Transparent"/>
+                        
+                        <Button Name="btnClear1" Width="75" Height="75" Padding="0" BorderBrush="Transparent" Click="btnClear1_Click">
+                            <Image Height="50" Width="50" Stretch="Fill"
+                                Source="/Assets/AppBar/appbar_search_clear.png" Margin="0" />
+                        </Button>
+                    </StackPanel>
+
+                    <ListBox Grid.Row="1"  
+                      x:Name="MainListBox1" ItemsSource="{Binding Bibles}" 
+                        Background="white" SelectionChanged="MainListBox1_SelectionChanged" >
+                        <ListBox.ItemContainerStyle>
+                            <Style TargetType="ListBoxItem">
+                                <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                            </Style>
+                        </ListBox.ItemContainerStyle>
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Margin="0,0,0,2" Orientation="Vertical" Background="black">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock x:Name="Title1" Text="{Binding English}" 
+                            TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}" 
+                            FontSize="35" LineHeight="35" Height="45" Width="330" Foreground="White" />
+                                        <TextBlock x:Name="Abbrev1" Text="{Binding Abbrevs}" 
+                            TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}" 
+                            FontSize="35" LineHeight="35" Height="45" Foreground="White" HorizontalAlignment="Right" />
+                                    </StackPanel>
+                                    <TextBlock x:Name="Code1" Text="{Binding Swahili}" 
+                            TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}" 
+                            FontSize="35" LineHeight="35" Height="45" Foreground="White" />
+                                       
+                                </StackPanel>
+
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+
+                </Grid>
+            </phone:PivotItem>
+
+            <phone:PivotItem Header="New T.">
+                <Grid x:Name="LayoutRoot2" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel x:Name="SearchPanel2" Grid.Row="0" 
+                        Orientation="Horizontal" Background="Black">
+                        <Button Name="btnSearch2" Width="75" Height="75" Padding="0" BorderBrush="Transparent" Canvas.ZIndex="99" 
+                                Click="btnSearch2_Click">
+                            <Image Height="50" Width="50" Stretch="Fill"
+                                Source="/Assets/AppBar/appbar_search_now.png" Margin="0" />
+                        </Button>
+
+                        <TextBox x:Name="SearchBox2" Width="460" Height="75" FontSize="30" Padding="50,0,10,0" Margin="-75,-10,-75,-10" 
+                        TextChanged="SearchBox2_TextChanged" Foreground="#FFAA6F28" Background="Black" BorderBrush="Transparent"/>
+
+                        <Button Name="btnClear2" Width="75" Height="75" Padding="0" BorderBrush="Transparent" 
+                                Click="btnClear2_Click">
+                            <Image Height="50" Width="50" Stretch="Fill"
+                                Source="/Assets/AppBar/appbar_search_clear.png" Margin="0" />
+                        </Button>
+                    </StackPanel>
+
+                    <ListBox Grid.Row="1"  
+                      x:Name="MainListBox2" ItemsSource="{Binding Bibles}" 
+                        Background="white" SelectionChanged="MainListBox2_SelectionChanged" >
+                        <ListBox.ItemContainerStyle>
+                            <Style TargetType="ListBoxItem">
+                                <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                            </Style>
+                        </ListBox.ItemContainerStyle>
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Margin="0,0,0,2" Orientation="Vertical" Background="black">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock x:Name="Title2" Text="{Binding English}" 
+                            TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}" 
+                            FontSize="35" LineHeight="35" Height="45" Width="330" Foreground="White" />
+                                        <TextBlock x:Name="Abbrev2" Text="{Binding Abbrevs}" 
+                            TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}" 
+                            FontSize="35" LineHeight="35" Height="45" Foreground="White" HorizontalAlignment="Right" />
+                                    </StackPanel>
+                                    <TextBlock x:Name="Code1" Text="{Binding Swahili}" 
+                            TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}" 
+                            FontSize="35" LineHeight="35" Height="45" Foreground="White" />
+
+                                </StackPanel>
+
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+
+                </Grid>
+            </phone:PivotItem>
+
+        </phone:Pivot>
+        
+    </Grid>
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" >
+            <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/appbar_search.png" Text="Search" Click="SearchBible"/>
+            <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/appbar_favall.png" Text="Favourites"/>
+            <shell:ApplicationBarIconButton IconUri="/Assets/AppBar/appbar_settings.png" Text="Settings" Click="AppSettings"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="How it Works"/>
+                <shell:ApplicationBarMenuItem Text="Help and Support"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>
